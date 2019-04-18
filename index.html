@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fansí Schmansí</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#cead83">
+    <meta name="msapplication-TileColor" content="#373737">
+    <meta name="theme-color" content="#373737">
+</head>
+<body>
+    <div id='loading-page'>
+        <img src="https://res.cloudinary.com/debdev/image/upload/v1553119730/Fansi%20Schmansi/PinClipart.com_roasted-chicken-clip-art_3276375.png" class='chicken'>
+    </div>
+    <div id='nav-container'>
+        <nav class='nav-up'>
+            <header>
+                <a href='' id='logo-link'>
+                    <div id='logo'>
+                        <img class='fleur-de-lis' src="https://res.cloudinary.com/debdev/image/upload/v1555521828/Fansi%20Schmansi/fleur-de-lis-min.png" alt="fleur-de-lis">
+                        <h1 class='logo-text'>
+                            Fans<span>í</span> Schmans<span>í</span>
+                        </h1>
+                        <img class='subtext' src="https://res.cloudinary.com/debdev/image/upload/v1553118839/Fansi%20Schmansi/SCHICK_GASTSTA%CC%88TTE-min.png" alt="SCHICK GASTSTÄTTE">
+                    </div>
+                </a>
+            </header>
+            <div id='narrow-screen-header'>
+                <button id='narrow-header-button' onclick='navHeight()'>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a href=''>
+                    <h1 class='logo-text'>
+                        Fans<span>í</span> Schmans<span>í</span>
+                    </h1>
+                </a>
+            </div>
+            <div id='nav-item-container'>
+                <ul id='nav-items-list'>
+                    <li class='nav-item' id='nav-1'>
+                        <a href="#lunch-menu">
+                           <span>Menus</span> 
+                        </a>
+                    </li>
+                    <li class='nav-item' id='nav-2'>
+                        <a href="#gallery">
+                           <span>Gallery</span> 
+                        </a>
+                    </li>
+                    <li class='nav-item' id='nav-3'>
+                        <a href="#second-section">
+                           <span>About Us</span> 
+                        </a>
+                    </li>
+                    <li class='nav-item' id='nav-4'>
+                        <a href="#final-section">
+                           <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id='nav-contact-info'>
+                <div class='contact-icons'>
+                    <i class="fa fa-facebook icon" id='fb-icon'></i>
+                    <i class="fa fa-instagram icon" id='insta-icon'></i>
+                </div>
+                <div id='address'>
+                    4910  Hiddenview Drive<br> Philadelphia, PA 19108
+                </div>
+                <span id='phone-number'>
+                    215.867.5309
+                </span>
+            </div>
+            <a href="more-info.html" target="_blank" id='booking-link'>
+                <div id='booking-link-container'>
+                    <div id='border-div'>
+                        <p id='book-a-table'>Book a Table</p>
+                    </div>           
+                </div>
+            </a>        
+        </nav>       
+    </div>
+    <div class='small-nav-container nav-invisible'>
+        <div id='small-nav-item-container'>
+                <ul id='small-nav-items-list'>
+                    <li class='small-nav-item'>
+                        <button id='lunch-button' onclick='menuSwitch(1);window.location.href ="#placeholder-menu"'>Lunch</button>
+                    </li>
+                    <li class='small-nav-item'>
+                        <button id='evening-button' onclick='menuSwitch(2);window.location.href ="#placeholder-menu"'>Evening</button>
+                    </li>
+                    <li class='small-nav-item'>
+                        <button id='drink-button' onclick='menuSwitch(3);window.location.href ="#placeholder-menu"'>Drinks</button>
+                    </li>
+                </ul>
+            </div>
+    </div> 
+    
+    <div id='slide-section'>
+        <div id='slide-button-container'>
+            <a href='#button-alternative' role='button' class="slide-button" id='slide-button-1' onclick="buttonSwipe(1)"><div class='full'></div></a>
+            <a href='#button-alternative' role='button' class="slide-button" id='slide-button-2' onclick="buttonSwipe(2);"><div></div></a>
+            <a href='#button-alternative' role='button' class="slide-button" id='slide-button-3' onclick="buttonSwipe(3)"><div></div></a>
+            <a href='#button-alternative' role='button' class="slide-button" id='slide-button-4' onclick="buttonSwipe(4)"><div></div></a>
+            <a href='#button-alternative' role='button' class="slide-button" id='slide-button-5' onclick="buttonSwipe(5)"><div></div></a>
+        </div>   
+        <div id='slide-image-container' style='transform: translate(0px, 0px, 0px);'>
+            <div class="slide inactive" id='slide-1' style='height: 100%;'>
+                <h2 class="slide-text inactive-slide-text" id='slide-1-text'>Lorem ipsum dolor sit amet</h2>
+                <div class='slide-image' style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1553136614/Fansi%20Schmansi/lily-banse-365344-unsplash-min.jpg); min-width: 100%;'></div>
+            </div>
+            <div class="slide inactive" id='slide-2' style='height: 100%;'> 
+                <h2 class="slide-text inactive-slide-text" id='slide-2-text'>Consectetur adipiscing elit</h2>
+                <div class='slide-image' style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1553118827/Fansi%20Schmansi/2-min.jpg); min-width: 100%;'></div>
+            </div>
+            <div class="slide inactive" id='slide-3' style='height: 100%;'>
+                <h2 class="slide-text inactive-slide-text" id='slide-3-text'>Lorem ipsum dolor sit amet</h2>
+                <div class='slide-image' style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1553118828/Fansi%20Schmansi/3-min.jpg); min-width: 100%;'></div>
+            </div>
+            <div class="slide inactive" id='slide-4' style='height: 100%;'>
+                <h2 class="slide-text inactive-slide-text" id='slide-4-text'>Consectetur adipiscing elit</h2>
+                <div class='slide-image' style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1553136614/Fansi%20Schmansi/john-cafazza-428016-unsplash-min.jpg); min-width: 100%;'></div>
+            </div>
+            <div class="slide inactive" id='slide-5' style='height: 100%;'>
+                <h2 class="slide-text inactive-slide-text" id='slide-5-text'>Lorem ipsum dolor sit amet</h2>
+                <div class='slide-image' style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1555125274/Fansi%20Schmansi/michael-browning-188999-unsplash-min.jpg); min-width: 100%;'></div>
+            </div>
+            <div class="slide inactive" id='slide-6' style='height: 100%;'>
+                    <h2 class="slide-text inactive-slide-text" id='slide-1-text'>Lorem ipsum dolor sit amet</h2>
+                    <div class='slide-image'></div>
+            </div>
+        </div>
+    </div>
+    
+    <main>
+        <div class='menu reveal' id='lunch-menu'>
+            <div class='menu-header'>
+                <h3 data-scroll>Lunch Selection</h3>
+                <div class="subheader-container">
+                    <p class='subheader' data-scroll>Ut enim ad minim veniam</p>
+                    <div class='drinks-and-prices' data-scroll>
+                        <p>Aute irure (dolor)<span>:$7</span></p>
+                        <p>Et ligula<span>:$7</span></p>    
+                    </div>                  
+                </div>
+            </div>
+            <div class='appetizers food-type'>
+                <div class='food-data'>
+                    <div class='table'>
+                        <div class='title-row'>
+                            <div class='title'>
+                                <h3 data-scroll>Appetizers</h3>
+                                <hr data-scroll>
+                            </div>
+                        </div>
+                        <div class='row row-1' data-scroll>                     
+                                <div class='cell 1a' data-scroll>
+                                    <div class='name-and-price-container'>
+                                        <p class='name'>Mollit anim</p>
+                                        <p class='price'>$ 5.75 / $ 8.25</p>
+                                    </div>
+                                    <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate, aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                </div>
+                                <div class='cell 1b' data-scroll>
+                                    <div class='name-and-price-container'>
+                                        <p class='name'>Nam at lectus</p>
+                                        <p class='price'>$ 11.75</p>
+                                    </div>
+                                    <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus</p>    
+                                </div>
+                                <div class='cell 1c' data-scroll>
+                                    <div class='name-and-price-container'>
+                                        <p class='name'>Vel turpis nunct</p>
+                                        <p class='price'>$ 12.25</p>
+                                    </div>                     
+                                    <p class='description'>Adipiscing bibendum, est ultricies integer, quis auctor elit sed</p>
+                                </div>                 
+                                <div class='cell 2a' data-scroll>
+                                    <div class='name-and-price-container'>
+                                        <p class='name'>Morbi tristique</p>
+                                        <p class='price'>$ 12.50</p>
+                                    </div>
+                                    <p class='description'>Sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                </div>
+                                <div class='cell 2b' data-scroll>
+                                    <div class='name-and-price-container'>
+                                        <p class='name'>Bibendum enim</p>
+                                        <p class='price'>$ 14.75</p>     
+                                    </div>
+                                    <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                </div>
+                                <div class='cell 2c' data-scroll>
+                                    <div class='name-and-price-container'>
+                                        <p class='name'>Est lorem ipsum</p>
+                                        <p class='price'>$ 14.25</p> 
+                                    </div>    
+                                    <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                </div>                  
+                                <div class='cell 3a' data-scroll>
+                                    <div class='name-and-price-container'>
+                                    <p class='name'>Habitant morbi</p>
+                                    <p class='price'>$ 14.25</p>
+                                </div>
+                                    <p class='description'>Vuis aute irure dolor in reprehenderit in voluptate / eget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                </div>
+                                <div class='cell 3b' data-scroll>
+                                    <div class='name-and-price-container'>
+                                        <p class='name'>Netus et malesuada</p>
+                                        <p class='price'>$ 15.25</p>
+                                    </div>
+                                    <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus / duis aute irure dolor in reprehenderit in voluptate / Eget nunc, lobortis mattis</p>   
+                                </div>
+                                <div class='cell 3c' data-scroll>
+                                    <div class='name-and-price-container'>
+                                        <p class='name'>Donec enim diam</p>
+                                        <p class='price'>$ 15.75</p>
+                                    </div>
+                                    <p class='description'>Aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                </div>
+                        </div>                     
+                    </div>
+                </div>
+            </div>
+            <div class='main-course food-type'>
+                    <div class='food-data'>
+                        <div class='table'>
+                            <div class='title-row'>
+                                <div class='title'>
+                                    <h3 data-scroll>Main Course</h3>
+                                    <hr data-scroll>
+                                </div>
+                            </div>
+                            <div class='row row-1' data-scroll>
+                                    <div class='cell 1a' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Mollit anim</p>
+                                            <p class='price'>$ 5.75 / $ 8.25</p>
+                                        </div>
+                                        <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate, aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                    </div>
+                                    <div class='cell 1b' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Nam at lectus</p>
+                                            <p class='price'>$ 11.75</p>
+                                        </div>
+                                        <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus</p>    
+                                    </div>
+                                    <div class='cell 1c' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Vel turpis nunct</p>
+                                            <p class='price'>$ 12.25</p>
+                                        </div>                     
+                                        <p class='description'>Adipiscing bibendum, est ultricies integer, quis auctor elit sed</p>
+                                    </div>                 
+                                    <div class='cell 2a' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Morbi tristique</p>
+                                            <p class='price'>$ 12.50</p>
+                                        </div>
+                                        <p class='description'>Sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                    </div>
+                                    <div class='cell 2b' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Bibendum enim</p>
+                                            <p class='price'>$ 14.75</p>     
+                                        </div>
+                                        <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                    </div>
+                                    <div class='cell 2c' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Est lorem ipsum</p>
+                                            <p class='price'>$ 14.25</p> 
+                                        </div>    
+                                        <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                    </div>                  
+                                    <div class='cell 3a' data-scroll>
+                                        <div class='name-and-price-container'>
+                                        <p class='name'>Habitant morbi</p>
+                                        <p class='price'>$ 14.25</p>
+                                    </div>
+                                        <p class='description'>Vuis aute irure dolor in reprehenderit in voluptate / eget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                    </div>
+                                    <div class='cell 3b' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Netus et malesuada</p>
+                                            <p class='price'>$ 15.25</p>
+                                        </div>
+                                        <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus / duis aute irure dolor in reprehenderit in voluptate / Eget nunc, lobortis mattis</p>   
+                                    </div>
+                                    <div class='cell 3c' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Donec enim diam</p>
+                                            <p class='price'>$ 15.75</p>
+                                        </div>
+                                        <p class='description'>Aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                    </div>
+                            </div>                     
+                        </div>
+                    </div>
+            </div>
+            <div class='desserts food-type'>
+                    <div class='food-data'>
+                        <div class='table'>
+                            <div class='title-row'>
+                                <div class='title'>
+                                    <h3 data-scroll>Desserts</h3>
+                                    <hr data-scroll>
+                                </div>
+                            </div>
+                            <div class='row row-1' data-scroll>
+                                    <div class='cell 1a' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Mollit anim</p>
+                                            <p class='price'>$ 5.75 / $ 8.25</p>
+                                        </div>
+                                        <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate, aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                    </div>
+                                    <div class='cell 1b' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Nam at lectus</p>
+                                            <p class='price'>$ 11.75</p>
+                                        </div>
+                                        <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus</p>    
+                                    </div>
+                                    <div class='cell 1c' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Vel turpis nunct</p>
+                                            <p class='price'>$ 12.25</p>
+                                        </div>                     
+                                        <p class='description'>Adipiscing bibendum, est ultricies integer, quis auctor elit sed</p>
+                                    </div>                 
+                                    <div class='cell 2a' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Morbi tristique</p>
+                                            <p class='price'>$ 12.50</p>
+                                        </div>
+                                        <p class='description'>Sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                    </div>
+                                    <div class='cell 2b' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Bibendum enim</p>
+                                            <p class='price'>$ 14.75</p>     
+                                        </div>
+                                        <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                    </div>
+                                    <div class='cell 2c' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Est lorem ipsum</p>
+                                            <p class='price'>$ 14.25</p> 
+                                        </div>    
+                                        <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                    </div>
+                                    <div class='cell 3a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Bibendum enim</p>
+                                                <p class='price'>$ 14.75</p>     
+                                            </div>
+                                            <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                        </div>
+                                        <div class='cell 3b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Est lorem ipsum</p>
+                                                <p class='price'>$ 14.25</p> 
+                                            </div>    
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>                  
+                            </div>                    
+                        </div>
+                    </div>
+            </div>
+            <div class='coffees food-type'>
+                    <div class='food-data'>
+                        <div class='table'>
+                            <div class='title-row'>
+                                <div class='title'>
+                                    <h3 data-scroll>Coffees</h3>
+                                    <hr data-scroll>
+                                </div>
+                            </div>
+                            <div class='row row-1' data-scroll>
+                                    <div class='cell 1a' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Mollit anim</p>
+                                            <p class='price'>$ 5.75 / $ 8.25</p>
+                                        </div>
+                                        <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate, aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                    </div>
+                                    <div class='cell 1b' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Nam at lectus</p>
+                                            <p class='price'>$ 11.75</p>
+                                        </div>
+                                        <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus</p>    
+                                    </div>
+                                    <div class='cell 1c' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Vel turpis nunct</p>
+                                            <p class='price'>$ 12.25</p>
+                                        </div>                     
+                                        <p class='description'>Adipiscing bibendum, est ultricies integer, quis auctor elit sed</p>
+                                    </div>                 
+                                    <div class='cell 2a' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Morbi tristique</p>
+                                            <p class='price'>$ 12.50</p>
+                                        </div>
+                                        <p class='description'>Sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                    </div>
+                                    <div class='cell 2b' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Bibendum enim</p>
+                                            <p class='price'>$ 14.75</p>     
+                                        </div>
+                                        <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                    </div>
+                                    <div class='cell 2c' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Est lorem ipsum</p>
+                                            <p class='price'>$ 14.25</p> 
+                                        </div>    
+                                        <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                    </div>                  
+                            </div>                    
+                        </div>
+                    </div>
+            </div>
+            <div class='teas food-type'>
+                    <div class='food-data'>
+                        <div class='table'>
+                            <div class='title-row'>
+                                <div class='title'>
+                                    <h3 data-scroll>Teas</h3>
+                                    <hr data-scroll>
+                                </div>
+                            </div>
+                            <div class='row row-1' data-scroll>
+                                    <div class='cell 1a' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Mollit anim</p>
+                                            <p class='price'>$ 5.75 / $ 8.25</p>
+                                        </div>
+                                        <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate, aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                    </div>
+                                    <div class='cell 1b' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Nam at lectus</p>
+                                            <p class='price'>$ 11.75</p>
+                                        </div>
+                                        <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus</p>    
+                                    </div>
+                                    <div class='cell 1c' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Vel turpis nunct</p>
+                                            <p class='price'>$ 12.25</p>
+                                        </div>                     
+                                        <p class='description'>Adipiscing bibendum, est ultricies integer, quis auctor elit sed</p>
+                                    </div>                 
+                                    <div class='cell 2a' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Morbi tristique</p>
+                                            <p class='price'>$ 12.50</p>
+                                        </div>
+                                        <p class='description'>Sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                    </div>
+                                    <div class='cell 2b' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Bibendum enim</p>
+                                            <p class='price'>$ 14.75</p>     
+                                        </div>
+                                        <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                    </div>
+                                    <div class='cell 2c' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Est lorem ipsum</p>
+                                            <p class='price'>$ 14.25</p> 
+                                        </div>    
+                                        <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                    </div>                  
+                            </div>                    
+                        </div>
+                    </div>
+            </div> 
+        </div>
+        <div class='menu hide' id='evening-menu'>
+                <div class='menu-header'>
+                    <h3 data-scroll>Evening Selection</h3>
+                    <div class="subheader-container">
+                        <p class='subheader' data-scroll>Ut enim ad minim veniam</p>
+                        <div class='drinks-and-prices' data-scroll>
+                            <p>Aute irure (dolor)<span>:$7</span></p>
+                            <p>Et ligula<span>:$7</span></p>    
+                        </div>                  
+                    </div>
+                </div>
+                <div class='appetizers food-type'>
+                    <div class='food-data'>
+                        <div class='table'>
+                            <div class='title-row'>
+                                <div class='title'>
+                                    <h3 data-scroll>Appetizers</h3>
+                                    <hr data-scroll>
+                                </div>
+                            </div>
+                            <div class='row row-1' data-scroll>                     
+                                    <div class='cell 1a' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Mollit anim</p>
+                                            <p class='price'>$ 5.75 / $ 8.25</p>
+                                        </div>
+                                        <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate, aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                    </div>
+                                    <div class='cell 1b' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Nam at lectus</p>
+                                            <p class='price'>$ 11.75</p>
+                                        </div>
+                                        <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus</p>    
+                                    </div>
+                                    <div class='cell 1c' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Vel turpis nunct</p>
+                                            <p class='price'>$ 12.25</p>
+                                        </div>                     
+                                        <p class='description'>Adipiscing bibendum, est ultricies integer, quis auctor elit sed</p>
+                                    </div>                 
+                                    <div class='cell 2a' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Morbi tristique</p>
+                                            <p class='price'>$ 12.50</p>
+                                        </div>
+                                        <p class='description'>Sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                    </div>
+                                    <div class='cell 2b' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Bibendum enim</p>
+                                            <p class='price'>$ 14.75</p>     
+                                        </div>
+                                        <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                    </div>
+                                    <div class='cell 2c' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Est lorem ipsum</p>
+                                            <p class='price'>$ 14.25</p> 
+                                        </div>    
+                                        <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                    </div>                  
+                                    <div class='cell 3a' data-scroll>
+                                        <div class='name-and-price-container'>
+                                        <p class='name'>Habitant morbi</p>
+                                        <p class='price'>$ 14.25</p>
+                                    </div>
+                                        <p class='description'>Vuis aute irure dolor in reprehenderit in voluptate / eget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                    </div>
+                                    <div class='cell 3b' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Netus et malesuada</p>
+                                            <p class='price'>$ 15.25</p>
+                                        </div>
+                                        <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus / duis aute irure dolor in reprehenderit in voluptate / Eget nunc, lobortis mattis</p>   
+                                    </div>
+                                    <div class='cell 3c' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Donec enim diam</p>
+                                            <p class='price'>$ 15.75</p>
+                                        </div>
+                                        <p class='description'>Aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                    </div>
+                            </div>                     
+                        </div>
+                    </div>
+                </div>
+                <div class='main-course food-type'>
+                        <div class='food-data'>
+                            <div class='table'>
+                                <div class='title-row'>
+                                    <div class='title'>
+                                        <h3 data-scroll>Main Course</h3>
+                                        <hr data-scroll>
+                                    </div>
+                                </div>
+                                <div class='row row-1' data-scroll>
+                                        <div class='cell 1a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Mollit anim</p>
+                                                <p class='price'>$ 5.75 / $ 8.25</p>
+                                            </div>
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate, aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                        </div>
+                                        <div class='cell 1b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Nam at lectus</p>
+                                                <p class='price'>$ 11.75</p>
+                                            </div>
+                                            <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus</p>    
+                                        </div>
+                                        <div class='cell 1c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Vel turpis nunct</p>
+                                                <p class='price'>$ 12.25</p>
+                                            </div>                     
+                                            <p class='description'>Adipiscing bibendum, est ultricies integer, quis auctor elit sed</p>
+                                        </div>                 
+                                        <div class='cell 2a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Morbi tristique</p>
+                                                <p class='price'>$ 12.50</p>
+                                            </div>
+                                            <p class='description'>Sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>
+                                        <div class='cell 2b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Bibendum enim</p>
+                                                <p class='price'>$ 14.75</p>     
+                                            </div>
+                                            <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                        </div>
+                                        <div class='cell 2c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Est lorem ipsum</p>
+                                                <p class='price'>$ 14.25</p> 
+                                            </div>    
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>                  
+                                        <div class='cell 3a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                            <p class='name'>Habitant morbi</p>
+                                            <p class='price'>$ 14.25</p>
+                                        </div>
+                                            <p class='description'>Vuis aute irure dolor in reprehenderit in voluptate / eget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                        </div>
+                                        <div class='cell 3b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Netus et malesuada</p>
+                                                <p class='price'>$ 15.25</p>
+                                            </div>
+                                            <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus / duis aute irure dolor in reprehenderit in voluptate / Eget nunc, lobortis mattis</p>   
+                                        </div>
+                                        <div class='cell 3c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Donec enim diam</p>
+                                                <p class='price'>$ 15.75</p>
+                                            </div>
+                                            <p class='description'>Aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                        </div>
+                                </div>                     
+                            </div>
+                        </div>
+                </div>
+                <div class='desserts food-type'>
+                        <div class='food-data'>
+                            <div class='table'>
+                                <div class='title-row'>
+                                    <div class='title'>
+                                        <h3 data-scroll>Desserts</h3>
+                                        <hr data-scroll>
+                                    </div>
+                                </div>
+                                <div class='row row-1' data-scroll>
+                                        <div class='cell 1a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Mollit anim</p>
+                                                <p class='price'>$ 5.75 / $ 8.25</p>
+                                            </div>
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate, aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                        </div>
+                                        <div class='cell 1b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Nam at lectus</p>
+                                                <p class='price'>$ 11.75</p>
+                                            </div>
+                                            <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus</p>    
+                                        </div>
+                                        <div class='cell 1c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Vel turpis nunct</p>
+                                                <p class='price'>$ 12.25</p>
+                                            </div>                     
+                                            <p class='description'>Adipiscing bibendum, est ultricies integer, quis auctor elit sed</p>
+                                        </div>                 
+                                        <div class='cell 2a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Morbi tristique</p>
+                                                <p class='price'>$ 12.50</p>
+                                            </div>
+                                            <p class='description'>Sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>
+                                        <div class='cell 2b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Bibendum enim</p>
+                                                <p class='price'>$ 14.75</p>     
+                                            </div>
+                                            <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                        </div>
+                                        <div class='cell 2c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Est lorem ipsum</p>
+                                                <p class='price'>$ 14.25</p> 
+                                            </div>    
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>
+                                        <div class='cell 3a' data-scroll>
+                                                <div class='name-and-price-container'>
+                                                    <p class='name'>Bibendum enim</p>
+                                                    <p class='price'>$ 14.75</p>     
+                                                </div>
+                                                <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                            </div>
+                                            <div class='cell 3b' data-scroll>
+                                                <div class='name-and-price-container'>
+                                                    <p class='name'>Est lorem ipsum</p>
+                                                    <p class='price'>$ 14.25</p> 
+                                                </div>    
+                                                <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                            </div>                  
+                                </div>                    
+                            </div>
+                        </div>
+                </div>
+                <div class='coffees food-type'>
+                        <div class='food-data'>
+                            <div class='table'>
+                                <div class='title-row'>
+                                    <div class='title'>
+                                        <h3 data-scroll>Coffees</h3>
+                                        <hr data-scroll>
+                                    </div>
+                                </div>
+                                <div class='row row-1' data-scroll>
+                                        <div class='cell 1a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Mollit anim</p>
+                                                <p class='price'>$ 5.75 / $ 8.25</p>
+                                            </div>
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate, aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                        </div>
+                                        <div class='cell 1b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Nam at lectus</p>
+                                                <p class='price'>$ 11.75</p>
+                                            </div>
+                                            <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus</p>    
+                                        </div>
+                                        <div class='cell 1c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Vel turpis nunct</p>
+                                                <p class='price'>$ 12.25</p>
+                                            </div>                     
+                                            <p class='description'>Adipiscing bibendum, est ultricies integer, quis auctor elit sed</p>
+                                        </div>                 
+                                        <div class='cell 2a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Morbi tristique</p>
+                                                <p class='price'>$ 12.50</p>
+                                            </div>
+                                            <p class='description'>Sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>
+                                        <div class='cell 2b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Bibendum enim</p>
+                                                <p class='price'>$ 14.75</p>     
+                                            </div>
+                                            <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                        </div>
+                                        <div class='cell 2c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Est lorem ipsum</p>
+                                                <p class='price'>$ 14.25</p> 
+                                            </div>    
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>                  
+                                </div>                    
+                            </div>
+                        </div>
+                </div>
+                <div class='teas food-type'>
+                        <div class='food-data'>
+                            <div class='table'>
+                                <div class='title-row'>
+                                    <div class='title'>
+                                        <h3 data-scroll>Teas</h3>
+                                        <hr data-scroll>
+                                    </div>
+                                </div>
+                                <div class='row row-1' data-scroll>
+                                        <div class='cell 1a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Mollit anim</p>
+                                                <p class='price'>$ 5.75 / $ 8.25</p>
+                                            </div>
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate, aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                        </div>
+                                        <div class='cell 1b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Nam at lectus</p>
+                                                <p class='price'>$ 11.75</p>
+                                            </div>
+                                            <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus</p>    
+                                        </div>
+                                        <div class='cell 1c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Vel turpis nunct</p>
+                                                <p class='price'>$ 12.25</p>
+                                            </div>                     
+                                            <p class='description'>Adipiscing bibendum, est ultricies integer, quis auctor elit sed</p>
+                                        </div>                 
+                                        <div class='cell 2a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Morbi tristique</p>
+                                                <p class='price'>$ 12.50</p>
+                                            </div>
+                                            <p class='description'>Sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>
+                                        <div class='cell 2b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Bibendum enim</p>
+                                                <p class='price'>$ 14.75</p>     
+                                            </div>
+                                            <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                        </div>
+                                        <div class='cell 2c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Est lorem ipsum</p>
+                                                <p class='price'>$ 14.25</p> 
+                                            </div>    
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>                  
+                                </div>                    
+                            </div>
+                        </div>
+                </div> 
+        </div>
+        <div class='menu hide' id='drinks-menu'>
+                <div class='menu-header'>
+                    <h3 data-scroll>Drinks Selection</h3>
+                    <div class="subheader-container">
+                        <p class='subheader' data-scroll>Ut enim ad minim veniam</p>
+                        <div class='drinks-and-prices' data-scroll>
+                            <p>Aute irure (dolor)<span>:$7</span></p>
+                            <p>Et ligula<span>:$7</span></p>    
+                        </div>                  
+                    </div>
+                </div>
+                <div class='appetizers food-type'>
+                    <div class='food-data'>
+                        <div class='table'>
+                            <div class='title-row'>
+                                <div class='title'>
+                                    <h3 data-scroll>Appetizers</h3>
+                                    <hr data-scroll>
+                                </div>
+                            </div>
+                            <div class='row row-1' data-scroll>                     
+                                    <div class='cell 1a' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Mollit anim</p>
+                                            <p class='price'>$ 5.75 / $ 8.25</p>
+                                        </div>
+                                        <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate, aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                    </div>
+                                    <div class='cell 1b' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Nam at lectus</p>
+                                            <p class='price'>$ 11.75</p>
+                                        </div>
+                                        <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus</p>    
+                                    </div>
+                                    <div class='cell 1c' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Vel turpis nunct</p>
+                                            <p class='price'>$ 12.25</p>
+                                        </div>                     
+                                        <p class='description'>Adipiscing bibendum, est ultricies integer, quis auctor elit sed</p>
+                                    </div>                 
+                                    <div class='cell 2a' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Morbi tristique</p>
+                                            <p class='price'>$ 12.50</p>
+                                        </div>
+                                        <p class='description'>Sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                    </div>
+                                    <div class='cell 2b' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Bibendum enim</p>
+                                            <p class='price'>$ 14.75</p>     
+                                        </div>
+                                        <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                    </div>
+                                    <div class='cell 2c' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Est lorem ipsum</p>
+                                            <p class='price'>$ 14.25</p> 
+                                        </div>    
+                                        <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                    </div>                  
+                                    <div class='cell 3a' data-scroll>
+                                        <div class='name-and-price-container'>
+                                        <p class='name'>Habitant morbi</p>
+                                        <p class='price'>$ 14.25</p>
+                                    </div>
+                                        <p class='description'>Vuis aute irure dolor in reprehenderit in voluptate / eget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                    </div>
+                                    <div class='cell 3b' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Netus et malesuada</p>
+                                            <p class='price'>$ 15.25</p>
+                                        </div>
+                                        <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus / duis aute irure dolor in reprehenderit in voluptate / Eget nunc, lobortis mattis</p>   
+                                    </div>
+                                    <div class='cell 3c' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Donec enim diam</p>
+                                            <p class='price'>$ 15.75</p>
+                                        </div>
+                                        <p class='description'>Aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                    </div>
+                            </div>                     
+                        </div>
+                    </div>
+                </div>
+                <div class='main-course food-type'>
+                        <div class='food-data'>
+                            <div class='table'>
+                                <div class='title-row'>
+                                    <div class='title'>
+                                        <h3 data-scroll>Main Course</h3>
+                                        <hr data-scroll>
+                                    </div>
+                                </div>
+                                <div class='row row-1' data-scroll>
+                                        <div class='cell 1a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Mollit anim</p>
+                                                <p class='price'>$ 5.75 / $ 8.25</p>
+                                            </div>
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate, aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                        </div>
+                                        <div class='cell 1b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Nam at lectus</p>
+                                                <p class='price'>$ 11.75</p>
+                                            </div>
+                                            <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus</p>    
+                                        </div>
+                                        <div class='cell 1c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Vel turpis nunct</p>
+                                                <p class='price'>$ 12.25</p>
+                                            </div>                     
+                                            <p class='description'>Adipiscing bibendum, est ultricies integer, quis auctor elit sed</p>
+                                        </div>                 
+                                        <div class='cell 2a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Morbi tristique</p>
+                                                <p class='price'>$ 12.50</p>
+                                            </div>
+                                            <p class='description'>Sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>
+                                        <div class='cell 2b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Bibendum enim</p>
+                                                <p class='price'>$ 14.75</p>     
+                                            </div>
+                                            <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                        </div>
+                                        <div class='cell 2c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Est lorem ipsum</p>
+                                                <p class='price'>$ 14.25</p> 
+                                            </div>    
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>                  
+                                        <div class='cell 3a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                            <p class='name'>Habitant morbi</p>
+                                            <p class='price'>$ 14.25</p>
+                                        </div>
+                                            <p class='description'>Vuis aute irure dolor in reprehenderit in voluptate / eget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                        </div>
+                                        <div class='cell 3b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Netus et malesuada</p>
+                                                <p class='price'>$ 15.25</p>
+                                            </div>
+                                            <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus / duis aute irure dolor in reprehenderit in voluptate / Eget nunc, lobortis mattis</p>   
+                                        </div>
+                                        <div class='cell 3c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Donec enim diam</p>
+                                                <p class='price'>$ 15.75</p>
+                                            </div>
+                                            <p class='description'>Aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                        </div>
+                                </div>                     
+                            </div>
+                        </div>
+                </div>
+                <div class='desserts food-type'>
+                        <div class='food-data'>
+                            <div class='table'>
+                                <div class='title-row'>
+                                    <div class='title'>
+                                        <h3 data-scroll>Desserts</h3>
+                                        <hr data-scroll>
+                                    </div>
+                                </div>
+                                <div class='row row-1' data-scroll>
+                                        <div class='cell 1a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Mollit anim</p>
+                                                <p class='price'>$ 5.75 / $ 8.25</p>
+                                            </div>
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate, aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                        </div>
+                                        <div class='cell 1b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Nam at lectus</p>
+                                                <p class='price'>$ 11.75</p>
+                                            </div>
+                                            <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus</p>    
+                                        </div>
+                                        <div class='cell 1c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Vel turpis nunct</p>
+                                                <p class='price'>$ 12.25</p>
+                                            </div>                     
+                                            <p class='description'>Adipiscing bibendum, est ultricies integer, quis auctor elit sed</p>
+                                        </div>                 
+                                        <div class='cell 2a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Morbi tristique</p>
+                                                <p class='price'>$ 12.50</p>
+                                            </div>
+                                            <p class='description'>Sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>
+                                        <div class='cell 2b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Bibendum enim</p>
+                                                <p class='price'>$ 14.75</p>     
+                                            </div>
+                                            <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                        </div>
+                                        <div class='cell 2c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Est lorem ipsum</p>
+                                                <p class='price'>$ 14.25</p> 
+                                            </div>    
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>
+                                        <div class='cell 3a' data-scroll>
+                                                <div class='name-and-price-container'>
+                                                    <p class='name'>Bibendum enim</p>
+                                                    <p class='price'>$ 14.75</p>     
+                                                </div>
+                                                <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                            </div>
+                                            <div class='cell 3b' data-scroll>
+                                                <div class='name-and-price-container'>
+                                                    <p class='name'>Est lorem ipsum</p>
+                                                    <p class='price'>$ 14.25</p> 
+                                                </div>    
+                                                <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                            </div>                  
+                                </div>                    
+                            </div>
+                        </div>
+                </div>
+                <div class='coffees food-type'>
+                        <div class='food-data'>
+                            <div class='table'>
+                                <div class='title-row'>
+                                    <div class='title'>
+                                        <h3 data-scroll>Coffees</h3>
+                                        <hr data-scroll>
+                                    </div>
+                                </div>
+                                <div class='row row-1' data-scroll>
+                                        <div class='cell 1a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Mollit anim</p>
+                                                <p class='price'>$ 5.75 / $ 8.25</p>
+                                            </div>
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate, aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                        </div>
+                                        <div class='cell 1b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Nam at lectus</p>
+                                                <p class='price'>$ 11.75</p>
+                                            </div>
+                                            <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus</p>    
+                                        </div>
+                                        <div class='cell 1c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Vel turpis nunct</p>
+                                                <p class='price'>$ 12.25</p>
+                                            </div>                     
+                                            <p class='description'>Adipiscing bibendum, est ultricies integer, quis auctor elit sed</p>
+                                        </div>                 
+                                        <div class='cell 2a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Morbi tristique</p>
+                                                <p class='price'>$ 12.50</p>
+                                            </div>
+                                            <p class='description'>Sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>
+                                        <div class='cell 2b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Bibendum enim</p>
+                                                <p class='price'>$ 14.75</p>     
+                                            </div>
+                                            <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                        </div>
+                                        <div class='cell 2c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Est lorem ipsum</p>
+                                                <p class='price'>$ 14.25</p> 
+                                            </div>    
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>                  
+                                </div>                    
+                            </div>
+                        </div>
+                </div>
+                <div class='teas food-type'>
+                        <div class='food-data'>
+                            <div class='table'>
+                                <div class='title-row'>
+                                    <div class='title'>
+                                        <h3 data-scroll>Teas</h3>
+                                        <hr data-scroll>
+                                    </div>
+                                </div>
+                                <div class='row row-1' data-scroll>
+                                        <div class='cell 1a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Mollit anim</p>
+                                                <p class='price'>$ 5.75 / $ 8.25</p>
+                                            </div>
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate, aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                        </div>
+                                        <div class='cell 1b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Nam at lectus</p>
+                                                <p class='price'>$ 11.75</p>
+                                            </div>
+                                            <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus</p>    
+                                        </div>
+                                        <div class='cell 1c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Vel turpis nunct</p>
+                                                <p class='price'>$ 12.25</p>
+                                            </div>                     
+                                            <p class='description'>Adipiscing bibendum, est ultricies integer, quis auctor elit sed</p>
+                                        </div>                 
+                                        <div class='cell 2a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Morbi tristique</p>
+                                                <p class='price'>$ 12.50</p>
+                                            </div>
+                                            <p class='description'>Sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>
+                                        <div class='cell 2b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Bibendum enim</p>
+                                                <p class='price'>$ 14.75</p>     
+                                            </div>
+                                            <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                        </div>
+                                        <div class='cell 2c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Est lorem ipsum</p>
+                                                <p class='price'>$ 14.25</p> 
+                                            </div>    
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>                  
+                                </div>                    
+                            </div>
+                        </div>
+                </div> 
+        </div>
+        <div class='menu placeholder' id='placeholder-menu'>
+                <div class='menu-header'>
+                    <h3 data-scroll>Lunch Selection</h3>
+                    <div class="subheader-container">
+                        <p class='subheader' data-scroll>Ut enim ad minim veniam</p>
+                        <div class='drinks-and-prices' data-scroll>
+                            <p>Aute irure (dolor)<span>:$7</span></p>
+                            <p>Et ligula<span>:$7</span></p>    
+                        </div>                  
+                    </div>
+                </div>
+                <div class='appetizers food-type'>
+                    <div class='food-data'>
+                        <div class='table'>
+                            <div class='title-row'>
+                                <div class='title'>
+                                    <h3 data-scroll>Appetizers</h3>
+                                    <hr data-scroll>
+                                </div>
+                            </div>
+                            <div class='row row-1' data-scroll>                     
+                                    <div class='cell 1a' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Mollit anim</p>
+                                            <p class='price'>$ 5.75 / $ 8.25</p>
+                                        </div>
+                                        <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate, aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                    </div>
+                                    <div class='cell 1b' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Nam at lectus</p>
+                                            <p class='price'>$ 11.75</p>
+                                        </div>
+                                        <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus</p>    
+                                    </div>
+                                    <div class='cell 1c' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Vel turpis nunct</p>
+                                            <p class='price'>$ 12.25</p>
+                                        </div>                     
+                                        <p class='description'>Adipiscing bibendum, est ultricies integer, quis auctor elit sed</p>
+                                    </div>                 
+                                    <div class='cell 2a' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Morbi tristique</p>
+                                            <p class='price'>$ 12.50</p>
+                                        </div>
+                                        <p class='description'>Sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                    </div>
+                                    <div class='cell 2b' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Bibendum enim</p>
+                                            <p class='price'>$ 14.75</p>     
+                                        </div>
+                                        <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                    </div>
+                                    <div class='cell 2c' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Est lorem ipsum</p>
+                                            <p class='price'>$ 14.25</p> 
+                                        </div>    
+                                        <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                    </div>                  
+                                    <div class='cell 3a' data-scroll>
+                                        <div class='name-and-price-container'>
+                                        <p class='name'>Habitant morbi</p>
+                                        <p class='price'>$ 14.25</p>
+                                    </div>
+                                        <p class='description'>Vuis aute irure dolor in reprehenderit in voluptate / eget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                    </div>
+                                    <div class='cell 3b' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Netus et malesuada</p>
+                                            <p class='price'>$ 15.25</p>
+                                        </div>
+                                        <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus / duis aute irure dolor in reprehenderit in voluptate / Eget nunc, lobortis mattis</p>   
+                                    </div>
+                                    <div class='cell 3c' data-scroll>
+                                        <div class='name-and-price-container'>
+                                            <p class='name'>Donec enim diam</p>
+                                            <p class='price'>$ 15.75</p>
+                                        </div>
+                                        <p class='description'>Aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                    </div>
+                            </div>                     
+                        </div>
+                    </div>
+                </div>
+                <div class='main-course food-type'>
+                        <div class='food-data'>
+                            <div class='table'>
+                                <div class='title-row'>
+                                    <div class='title'>
+                                        <h3 data-scroll>Main Course</h3>
+                                        <hr data-scroll>
+                                    </div>
+                                </div>
+                                <div class='row row-1' data-scroll>
+                                        <div class='cell 1a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Mollit anim</p>
+                                                <p class='price'>$ 5.75 / $ 8.25</p>
+                                            </div>
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate, aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                        </div>
+                                        <div class='cell 1b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Nam at lectus</p>
+                                                <p class='price'>$ 11.75</p>
+                                            </div>
+                                            <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus</p>    
+                                        </div>
+                                        <div class='cell 1c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Vel turpis nunct</p>
+                                                <p class='price'>$ 12.25</p>
+                                            </div>                     
+                                            <p class='description'>Adipiscing bibendum, est ultricies integer, quis auctor elit sed</p>
+                                        </div>                 
+                                        <div class='cell 2a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Morbi tristique</p>
+                                                <p class='price'>$ 12.50</p>
+                                            </div>
+                                            <p class='description'>Sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>
+                                        <div class='cell 2b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Bibendum enim</p>
+                                                <p class='price'>$ 14.75</p>     
+                                            </div>
+                                            <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                        </div>
+                                        <div class='cell 2c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Est lorem ipsum</p>
+                                                <p class='price'>$ 14.25</p> 
+                                            </div>    
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>                  
+                                        <div class='cell 3a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                            <p class='name'>Habitant morbi</p>
+                                            <p class='price'>$ 14.25</p>
+                                        </div>
+                                            <p class='description'>Vuis aute irure dolor in reprehenderit in voluptate / eget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                        </div>
+                                        <div class='cell 3b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Netus et malesuada</p>
+                                                <p class='price'>$ 15.25</p>
+                                            </div>
+                                            <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus / duis aute irure dolor in reprehenderit in voluptate / Eget nunc, lobortis mattis</p>   
+                                        </div>
+                                        <div class='cell 3c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Donec enim diam</p>
+                                                <p class='price'>$ 15.75</p>
+                                            </div>
+                                            <p class='description'>Aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                        </div>
+                                </div>                     
+                            </div>
+                        </div>
+                </div>
+                <div class='desserts food-type'>
+                        <div class='food-data'>
+                            <div class='table'>
+                                <div class='title-row'>
+                                    <div class='title'>
+                                        <h3 data-scroll>Desserts</h3>
+                                        <hr data-scroll>
+                                    </div>
+                                </div>
+                                <div class='row row-1' data-scroll>
+                                        <div class='cell 1a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Mollit anim</p>
+                                                <p class='price'>$ 5.75 / $ 8.25</p>
+                                            </div>
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate, aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                        </div>
+                                        <div class='cell 1b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Nam at lectus</p>
+                                                <p class='price'>$ 11.75</p>
+                                            </div>
+                                            <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus</p>    
+                                        </div>
+                                        <div class='cell 1c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Vel turpis nunct</p>
+                                                <p class='price'>$ 12.25</p>
+                                            </div>                     
+                                            <p class='description'>Adipiscing bibendum, est ultricies integer, quis auctor elit sed</p>
+                                        </div>                 
+                                        <div class='cell 2a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Morbi tristique</p>
+                                                <p class='price'>$ 12.50</p>
+                                            </div>
+                                            <p class='description'>Sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>
+                                        <div class='cell 2b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Bibendum enim</p>
+                                                <p class='price'>$ 14.75</p>     
+                                            </div>
+                                            <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                        </div>
+                                        <div class='cell 2c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Est lorem ipsum</p>
+                                                <p class='price'>$ 14.25</p> 
+                                            </div>    
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>
+                                        <div class='cell 3a' data-scroll>
+                                                <div class='name-and-price-container'>
+                                                    <p class='name'>Bibendum enim</p>
+                                                    <p class='price'>$ 14.75</p>     
+                                                </div>
+                                                <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                            </div>
+                                            <div class='cell 3b' data-scroll>
+                                                <div class='name-and-price-container'>
+                                                    <p class='name'>Est lorem ipsum</p>
+                                                    <p class='price'>$ 14.25</p> 
+                                                </div>    
+                                                <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                            </div>                  
+                                </div>                    
+                            </div>
+                        </div>
+                </div>
+                <div class='coffees food-type'>
+                        <div class='food-data'>
+                            <div class='table'>
+                                <div class='title-row'>
+                                    <div class='title'>
+                                        <h3 data-scroll>Coffees</h3>
+                                        <hr data-scroll>
+                                    </div>
+                                </div>
+                                <div class='row row-1' data-scroll>
+                                        <div class='cell 1a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Mollit anim</p>
+                                                <p class='price'>$ 5.75 / $ 8.25</p>
+                                            </div>
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate, aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                        </div>
+                                        <div class='cell 1b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Nam at lectus</p>
+                                                <p class='price'>$ 11.75</p>
+                                            </div>
+                                            <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus</p>    
+                                        </div>
+                                        <div class='cell 1c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Vel turpis nunct</p>
+                                                <p class='price'>$ 12.25</p>
+                                            </div>                     
+                                            <p class='description'>Adipiscing bibendum, est ultricies integer, quis auctor elit sed</p>
+                                        </div>                 
+                                        <div class='cell 2a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Morbi tristique</p>
+                                                <p class='price'>$ 12.50</p>
+                                            </div>
+                                            <p class='description'>Sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>
+                                        <div class='cell 2b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Bibendum enim</p>
+                                                <p class='price'>$ 14.75</p>     
+                                            </div>
+                                            <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                        </div>
+                                        <div class='cell 2c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Est lorem ipsum</p>
+                                                <p class='price'>$ 14.25</p> 
+                                            </div>    
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>                  
+                                </div>                    
+                            </div>
+                        </div>
+                </div>
+                <div class='teas food-type'>
+                        <div class='food-data'>
+                            <div class='table'>
+                                <div class='title-row'>
+                                    <div class='title'>
+                                        <h3 data-scroll>Teas</h3>
+                                        <hr data-scroll>
+                                    </div>
+                                </div>
+                                <div class='row row-1' data-scroll>
+                                        <div class='cell 1a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Mollit anim</p>
+                                                <p class='price'>$ 5.75 / $ 8.25</p>
+                                            </div>
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate, aliquam faucibus / duis aute irure, dolor in reprehenderit</p>
+                                        </div>
+                                        <div class='cell 1b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Nam at lectus</p>
+                                                <p class='price'>$ 11.75</p>
+                                            </div>
+                                            <p class='description'>Eget nunc, lobortis mattis, aliquam faucibus</p>    
+                                        </div>
+                                        <div class='cell 1c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Vel turpis nunct</p>
+                                                <p class='price'>$ 12.25</p>
+                                            </div>                     
+                                            <p class='description'>Adipiscing bibendum, est ultricies integer, quis auctor elit sed</p>
+                                        </div>                 
+                                        <div class='cell 2a' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Morbi tristique</p>
+                                                <p class='price'>$ 12.50</p>
+                                            </div>
+                                            <p class='description'>Sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>
+                                        <div class='cell 2b' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Bibendum enim</p>
+                                                <p class='price'>$ 14.75</p>     
+                                            </div>
+                                            <p class='description'>Raget nunc, lobortis mattis, aliquam faucibus / duis aute irure, dolor in reprehenderit, in voluptate</p>
+                                        </div>
+                                        <div class='cell 2c' data-scroll>
+                                            <div class='name-and-price-container'>
+                                                <p class='name'>Est lorem ipsum</p>
+                                                <p class='price'>$ 14.25</p> 
+                                            </div>    
+                                            <p class='description'>Duis aute irure, dolor in reprehenderit, in voluptate / sapien et ligula ullamcorper malesuada proin libero nunc</p>
+                                        </div>                  
+                                </div>                    
+                            </div>
+                        </div>
+                </div> 
+        </div>
+    </main>
+    
+    <section id='gallery'>
+        <div class='column-container'>
+            <div class='column image-column'>
+                <div class='image-container' id='first-container'>
+                    <img src='https://res.cloudinary.com/debdev/image/upload/v1553118826/Fansi%20Schmansi/1-min.jpg' class='image' id='first-image'>
+                </div>
+            </div>
+            <div class='column text-column'>
+                <div class='text-container first-text' data-scroll>
+                    <p>Nibh praesent tristique magna sit amet purus gravida quis. Ac tortor dignissim convallis aenean et tortor at risus viverra.</p>
+                    <img class='fleur-de-lis' src="https://res.cloudinary.com/debdev/image/upload/v1555521828/Fansi%20Schmansi/fleur-de-lis-min.png" alt="fleur-de-lis" data-scroll>
+                </div>
+            </div>   
+        </div>      
+    </section>
+    <section id='second-section'> 
+        <div class='column-container'>
+            <div class='column image-column'>
+                <div class='image-container' id='second-container'>
+                    <img src='https://res.cloudinary.com/debdev/image/upload/v1553136611/Fansi%20Schmansi/wesual-click-72548-unsplash-min.jpg' class='image' id='second-image'>
+                </div>
+                <div class='column text-column'>
+                    <div class='text-container second-text' data-scroll>
+                        <p>Nibh praesent tristique magna sit amet purus gravida quis. Ac tortor dignissim convallis aenean et tortor at risus viverra.</p>
+                        <img class='fleur-de-lis' src="https://res.cloudinary.com/debdev/image/upload/v1555521828/Fansi%20Schmansi/fleur-de-lis-min.png" alt="fleur-de-lis" data-scroll>
+                    </div>
+                </div>
+                <div class='pattern'></div> 
+            </div> 
+             
+        </div>    
+    </section>
+    <section id='final-section'>
+        <div id='left-info'>
+            <div id='find-us' data-scroll>
+                <p>Find US</p>
+                <span>4910  Hiddenview Drive<br> Philadelphia, PA 19108</span>
+            </div>
+            <div id='hours' data-scroll>
+                <p>Opening Hours</p>
+                <ul>
+                    <li>Mon-Tue-Wed</li>
+                    <li>11:30 am-10 pm</li>
+                    <li>Thu-Fri-Sat</li>
+                    <li>11:30 am-11 pm</li>
+                    <li>Sunday - closed (Jan to Mar)</li>
+                    <li>11:30 am-10 pm  (Apr to Dec)</li>
+                </ul>
+            </div>
+        </div>
+        <div id='map-info'>
+            <div id='map-container'>
+                 <div id='map'></div>
+                 <div id='map-deco'>
+                        <img class='fleur-de-lis' src="https://res.cloudinary.com/debdev/image/upload/v1555521828/Fansi%20Schmansi/fleur-de-lis-min.png" alt="fleur-de-lis" >
+                        <div class='deco-box box-1'></div>
+                        <div class='deco-box box-2'></div>
+                        <div class='deco-box box-3'></div>
+                        <div class='deco-box box-4'></div>
+                 </div>  
+             </div>
+        </div>
+    </section>
+
+    
+    <div id='narrow-booking-link-container'>
+        <div id='narrow-border-div'>
+            <a href="#contact">
+                <p>Find Us</p>
+            </a>
+            <a href="more-info.html" target="_blank">
+                <p>Book a Table</p>
+            </a>
+        </div>           
+    </div>
+    
+    <footer id='contact'>
+        <span class='footer-span copyright'>Copyright 2019 © All rights reserved Fansí Schmansí</span>
+        <span class='footer-span follow-us'>
+            Follow us:
+            <div class='contact-icons'>
+                <i class="fa fa-facebook icon"></i>
+                <i class="fa fa-instagram icon"></i>
+            </div>
+        </span>
+        <span class='footer-span'>Website by <a href="https://debxdev.github.io/debdevelops/" target="_blank">Deborah Thornton</a></span>
+    </footer>
+    
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script src="js/gmap.min.js" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9GCECq68LrLBR5H_Oz8I6PVdKd5dMwLE&callback=initMap"
+    async defer></script></script>
+    <script src="js/app.min.js"></script>
+    <script src="js/fadeScroll.min.js"></script>
+    <script src='js/drag.min.js'></script>
+</body>
+</html>
