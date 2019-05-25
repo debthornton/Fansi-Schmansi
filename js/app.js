@@ -29,7 +29,7 @@ function Slide(text, img, button, index, innerImg) {
                 }, 600);        
                 img.classList.remove('z-index');
                 img.classList.add('becoming-inactive');
-            }, 200);
+            }, 400);
             
             setTimeout(function() {
                 text.classList.remove('active-slide-text');
@@ -39,7 +39,7 @@ function Slide(text, img, button, index, innerImg) {
             setTimeout(function() {
                 img.classList.remove('becoming-inactive');
                 img.classList.add('inactive');
-            }, 900);
+            }, 1200);
         } 
         this.active = false;
     }
@@ -59,8 +59,13 @@ let slide5 = new Slide(document.getElementById('slide-5-text'), document.getElem
 
 let slides = [slide1, slide2, slide3, slide4, slide5];
 
+let buttons = [];
+
+slides.forEach(function(slide) {
+    buttons.push(slide.button);
+})
+
 function slideSwipe(index) { 
-    console.log(index);
     slides.forEach((slide) => {
         if(index === slide.index) {
             if(slide.active === false) {
@@ -69,7 +74,7 @@ function slideSwipe(index) {
         }else {
             slide.makeInactive();
         }
-    });
+    });  
 }
 slideSwipe(1);
 
@@ -84,8 +89,14 @@ const INTERVAL = setInterval(function() {
 
 function buttonSwipe(index) {
     slideSwipe(index);
-    console.log('clicked!');
     clearInterval(INTERVAL);
+    buttons.forEach(function(button) {
+        button.style.pointerEvents = 'none';
+        console.log(button);
+        setTimeout(function() {
+            button.style.pointerEvents = 'auto';
+        }, 1300); 
+    });
 }
 
 function Menu(button, menu, index) {
@@ -138,3 +149,18 @@ function menuSwitch(index) {
 }
 
 menuSwitch(1);
+
+function heightChange() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+window.addEventListener('load', () => {
+    heightChange();
+});
+
+window.addEventListener('resize', () => {  
+    setTimeout( () => {
+        heightChange();
+    }, 300)
+});

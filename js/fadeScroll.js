@@ -211,7 +211,7 @@ window.addEventListener('scroll', function() {
           
     // adding class to first section image on scroll
     if (scrollpos >= SectionTop) {    
-        if (scrollpos >= (FirstImageContainerTop - 400)) { 
+        if (scrollpos >= FirstImageContainerTop) { 
             FirstImage.className = 'image image-grow';
         }
     } else if (scrollpos <= (SectionTop - 550)) {

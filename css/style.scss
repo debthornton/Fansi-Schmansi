@@ -90,8 +90,8 @@ blockquote, q {
 .chicken {
     width: 200px;
     height: auto;
-    filter: invert(0.75);
     animation: swirl 1.2s 1 forwards 0.2s ease-out;
+    opacity: 0.6;
     @media screen and (max-width: 992px) {
         width: 150px;
     }
@@ -102,7 +102,6 @@ blockquote, q {
         }
         75% {
             transform: rotate(385deg);
-            filter: invert(0.75) blur(0.3px);
         }
         100% {
             transform: rotate(360deg);
@@ -280,7 +279,7 @@ blockquote, q {
         
         #nav-contact-info {
             position: absolute;
-            bottom: 100px;
+            bottom: 130px;
             @media screen and (max-width: 992px) {
                 bottom: 180px;
             }
@@ -358,6 +357,7 @@ blockquote, q {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                
                          
                 p {
                     text-align: center;
@@ -365,7 +365,8 @@ blockquote, q {
                     letter-spacing: 2px;
                     font-size: 0.8em;
                     opacity: 0;
-                    color: $main-theme-color;  
+                    color: $main-theme-color; 
+                     
                 }
             } 
         }
@@ -1042,6 +1043,7 @@ blockquote, q {
                     border: 6px solid transparent;
                     font-size: 0.76em;
                     font-weight: 300;
+                    background: transparent;
                     color: $main-theme-color;
                     text-transform: uppercase;
                     letter-spacing: 4px;
@@ -1172,7 +1174,7 @@ blockquote, q {
             position: absolute;
             right: 0;
             top: 0;
-            background-color: $image-fade-color;
+            background-color: transparent;
             
                 .slide-text {
                     color: $off-white; 
@@ -1235,14 +1237,16 @@ blockquote, q {
         .slide-image {
             background-size: cover;
             background-repeat: no-repeat;
-            background-attachment: fixed;
             min-height: 100%;
             left: auto;
             position: absolute;
             right: -100px;
             transform: scale(1.2);
             background-position: center;
-            opacity: 0.65;
+
+            @media screen and (max-width: 700px) {
+                right: -50px;
+            }
         }
     
         div.active {
@@ -1256,17 +1260,20 @@ blockquote, q {
             transform: scale(1);
             background-size: cover;
             background-repeat: no-repeat;
-            background-attachment: fixed;
             min-height: 100%;
             position: absolute;
             left: auto;
             background-position: center;
-            opacity: 0.65;
+            
+
+            @media screen and (max-width: 700px) {
+                transition: right 1.3s cubic-bezier(0.42, 0, 0.58, 1) 0s, transform 10s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+            }
         }
 
         div.becoming-inactive {
             width: 100%;
-            animation: slide-out 3s forwards ease-in 2.8s;
+            animation: slide-out 3s forwards ease-in 3s;
             z-index: 3;
             right: 0px;
             @keyframes slide-out {
@@ -1310,6 +1317,7 @@ main {
     display: flex;
     justify-content: baseline;
     align-items: center;
+    overflow-x: hidden;
     
     .menu {
         background-color: $beige;
@@ -1322,10 +1330,10 @@ main {
             padding: 85px 115px;    
         }
         @media screen and (max-width: 992px) {
-             padding: 65px 50px;               
+             padding: 165px 50px;               
         }
         @media screen and (max-width: 550px) {
-            padding: 65px 20px;
+            padding: 175px 20px 65px 20px;
         }
 
         .menu-header {
@@ -1668,30 +1676,30 @@ section {
                     position: relative;
                     width: 100%;
                     height: auto;
-                    top: -100%;
+                    transform: translateY(-100%);
                     @media screen and (max-width: 992px) {
                        top: 0;     
                     }
                 }
             
                 .image-grow {
-                    animation: imagegrow 0.55s forwards ease-out;
-                    top: -100%;
+                    animation: imagegrow 0.55s forwards ease;
+                    transform: translateY(-105%);
                     @keyframes imagegrow {
                         0% {
-                            top: -100%;  
+                            transform: translateY(-105%);  
                         }
                         100% {
-                            top: 0;
+                            transform: translateY(0); 
                         }
                     }
                     @media screen and (max-width: 992px) {
                         @keyframes imagegrow {
                             0% {
-                                top: 0;  
+                                transform: translateY(0);  
                             }
                             100% {
-                                top: 0;
+                                transform: translateY(0);
                             }
                         }  
                     }
@@ -1701,19 +1709,19 @@ section {
                     
                     @keyframes imageshrink {
                         0% {
-                            top: 0;
+                            transform: translateY(0); 
                         }
                         100% {
-                            top: -100%;
+                            transform: translateY(-105%); 
                         }
                     }
                     @media screen and (max-width: 992px) {
                         @keyframes imageshrink {
                             0% {
-                                top: 0;
+                                transform: translateY(0); 
                             }
                             100% {
-                                top: 0;
+                                transform: translateY(0); 
                             }
                         }
                     }
@@ -1769,7 +1777,8 @@ section {
         .text-column {
             flex: 1;
             @media screen and (max-width: 992px) {
-                width: 100%;         
+                width: 95%;
+                margin: 10px;         
           }
         }
     }      
@@ -1870,6 +1879,10 @@ section {
             padding-bottom: 90px;
             border-bottom: 1px solid $accent-color;
             line-height: 30px;
+
+            @media screen and (max-width: 992px) {
+                padding-top: 60px;     
+           }
 
             span {
                 font-weight: 300;
@@ -2002,6 +2015,7 @@ footer {
     height: 110px;
     @media screen and (max-width: 992px) {
         bottom: 90px;
+        padding-bottom: 80px;
     }
     
     .footer-span {
@@ -2067,6 +2081,15 @@ footer {
     outline: 3px solid $off-white;
     outline-offset: -30px;
     overflow-y: hidden;
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
     
     h1 {
         margin-top: 100px;
@@ -2075,7 +2098,7 @@ footer {
         font-weight: 700;
         font-family: 'Playfair Display', serif;
         letter-spacing: 3px;
-        animation: shift-right 1.2s forwards ease-out;
+        animation: fade-in 1.2s forwards ease-out;
         z-index: 2;
 
         @media screen and (max-width: 1112px) {
@@ -2143,7 +2166,7 @@ footer {
         justify-content: center;
         align-items: center;
         opacity: 0;
-        animation: shift-right 1.2s forwards ease-out 0.5s;
+        animation: fade-in 1.2s forwards ease-out 1.5s;
         position: relative;
         z-index: 2;
         .icon {
@@ -2303,7 +2326,7 @@ footer {
             position: relative;
             height: auto;
             opacity: 0;
-            animation: shift-left 0.7s forwards ease-out 1.5s;
+            animation: fade-in 0.7s forwards ease-out 1.5s;
             display: flex;
             @media screen and (max-width: 500px) {
                 font-size: 0.7em;
@@ -2353,35 +2376,11 @@ footer {
             position: relative;
             left: 0;
             opacity: 0;
+            margin-right: 10px;
             animation: shift-down 0.7s forwards ease-out 1.5s;
             @media screen and (max-width: 800px) {
             }
         }
-        
-        @keyframes shift-left {
-            0% {
-                opacity: 0;
-                left: 150%;
-            }
-            100% {
-                opacity: 1;
-                left: 25px;
-            }
-        }
-
-        @media screen and (max-width: 500px) {
-            @keyframes shift-left {
-                0% {
-                    opacity: 0;
-                    left: 150%;
-                }
-                100% {
-                    opacity: 1;
-                    left: 5px;
-                }
-            }
-        }
-
         
         @keyframes shift-down {
             0% {
