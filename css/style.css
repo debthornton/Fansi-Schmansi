@@ -1890,6 +1890,7 @@ blockquote, q {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100%;
+  min-width: 100%;
   left: auto;
   position: absolute;
   right: -100px;
@@ -1967,6 +1968,46 @@ blockquote, q {
 
 #slide-section .inactive {
   opacity: 0;
+}
+
+.webp #slide-1 .slide-image {
+  background-image: url("https://res.cloudinary.com/debdev/image/upload/e_brightness:-12/v1558922803/Fansi%20Schmansi/webp/File_5.webp");
+}
+
+.webp #slide-2 .slide-image {
+  background-image: url("https://res.cloudinary.com/debdev/image/upload/e_brightness:-12/v1558922802/Fansi%20Schmansi/webp/File_2.webp");
+}
+
+.webp #slide-3 .slide-image {
+  background-image: url("https://res.cloudinary.com/debdev/image/upload/e_brightness:-12/v1558922803/Fansi%20Schmansi/webp/File_4.webp");
+}
+
+.webp #slide-4 .slide-image {
+  background-image: url("https://res.cloudinary.com/debdev/image/upload/v1558922804/Fansi%20Schmansi/webp/File_3.webp");
+}
+
+.webp #slide-5 .slide-image {
+  background-image: url("https://res.cloudinary.com/debdev/image/upload/e_brightness:-12/v1558922802/Fansi%20Schmansi/webp/File_6.webp");
+}
+
+.no-webp #slide-1 .slide-image {
+  background-image: url("https://res.cloudinary.com/debdev/image/upload/e_brightness:-12/v1559155101/Fansi%20Schmansi/jpg/File_5.jpg");
+}
+
+.no-webp #slide-2 .slide-image {
+  background-image: url("https://res.cloudinary.com/debdev/image/upload/e_brightness:-12/v1559155101/Fansi%20Schmansi/jpg/File_2.jpg");
+}
+
+.no-webp #slide-3 .slide-image {
+  background-image: url("https://res.cloudinary.com/debdev/image/upload/e_brightness:-12/v1559155101/Fansi%20Schmansi/jpg/File_4.jpg");
+}
+
+.no-webp #slide-4 .slide-image {
+  background-image: url("https://res.cloudinary.com/debdev/image/upload/v1559155101/Fansi%20Schmansi/jpg/File_3.jpg");
+}
+
+.no-webp #slide-5 .slide-image {
+  background-image: url("https://res.cloudinary.com/debdev/image/upload/e_brightness:-12/v1559155100/Fansi%20Schmansi/jpg/File_6.jpg");
 }
 
 main, section, #final-section, footer {

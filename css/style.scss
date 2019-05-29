@@ -1238,6 +1238,7 @@ blockquote, q {
             background-size: cover;
             background-repeat: no-repeat;
             min-height: 100%;
+            min-width: 100%;
             left: auto;
             position: absolute;
             right: -100px;
@@ -1295,6 +1296,50 @@ blockquote, q {
 
     .inactive {
        opacity: 0;
+    }
+}
+
+.webp {
+    #slide-1 .slide-image {
+        background-image: url('https://res.cloudinary.com/debdev/image/upload/e_brightness:-12/v1558922803/Fansi%20Schmansi/webp/File_5.webp');
+    }
+    
+    #slide-2 .slide-image {
+        background-image: url('https://res.cloudinary.com/debdev/image/upload/e_brightness:-12/v1558922802/Fansi%20Schmansi/webp/File_2.webp');
+    }
+    
+    #slide-3 .slide-image {
+        background-image: url('https://res.cloudinary.com/debdev/image/upload/e_brightness:-12/v1558922803/Fansi%20Schmansi/webp/File_4.webp');
+    }
+    
+     #slide-4 .slide-image {
+        background-image: url('https://res.cloudinary.com/debdev/image/upload/v1558922804/Fansi%20Schmansi/webp/File_3.webp');
+    }
+    
+    #slide-5 .slide-image {
+        background-image: url('https://res.cloudinary.com/debdev/image/upload/e_brightness:-12/v1558922802/Fansi%20Schmansi/webp/File_6.webp');
+    }
+}
+
+.no-webp {
+    #slide-1 .slide-image {
+        background-image: url('https://res.cloudinary.com/debdev/image/upload/e_brightness:-12/v1559155101/Fansi%20Schmansi/jpg/File_5.jpg');
+    }
+    
+    #slide-2 .slide-image {
+        background-image: url('https://res.cloudinary.com/debdev/image/upload/e_brightness:-12/v1559155101/Fansi%20Schmansi/jpg/File_2.jpg');
+    }
+    
+    #slide-3 .slide-image {
+        background-image: url('https://res.cloudinary.com/debdev/image/upload/e_brightness:-12/v1559155101/Fansi%20Schmansi/jpg/File_4.jpg');
+    }
+    
+     #slide-4 .slide-image {
+        background-image: url('https://res.cloudinary.com/debdev/image/upload/v1559155101/Fansi%20Schmansi/jpg/File_3.jpg');
+    }
+    
+    #slide-5 .slide-image {
+        background-image: url('https://res.cloudinary.com/debdev/image/upload/e_brightness:-12/v1559155100/Fansi%20Schmansi/jpg/File_6.jpg');
     }
 }
 
@@ -1671,7 +1716,8 @@ section {
                     display: block;
                     margin: 0 25px;
                     width: auto;          
-               }         
+               }
+                        
                 .image {
                     position: relative;
                     width: 100%;
@@ -1786,6 +1832,7 @@ section {
 
 #second-section {
     padding-bottom: 550px;
+
     @media screen and (min-width: 993px) {
         .column-container {
             width: calc(100% - 200px);
