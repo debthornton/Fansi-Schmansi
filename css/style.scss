@@ -87,6 +87,8 @@ blockquote, q {
     }
 }
 
+// chicken icon for loading page
+
 .chicken {
     width: 200px;
     height: auto;
@@ -172,6 +174,7 @@ blockquote, q {
             }      
         }
 
+        // header for narrower screens
         #narrow-screen-header {
             display: none;
 
@@ -229,7 +232,9 @@ blockquote, q {
                 }           
             }
         }
-        
+
+
+        // cascading nav items animations
         #nav-item-container {
             color: $off-white;
             text-transform: uppercase;
@@ -277,6 +282,7 @@ blockquote, q {
             }         
         }
         
+        // contact info fade in
         #nav-contact-info {
             position: absolute;
             bottom: 130px;
@@ -332,6 +338,7 @@ blockquote, q {
             }
         }
         
+        // linking to booking styles
         #booking-link {
             position: absolute;
             bottom: 0;
@@ -372,6 +379,7 @@ blockquote, q {
         }
     }
 
+    // "roll-up menu" class for mobile displays
     .nav-up {
         @media screen and (max-width: 992px) {
             height: 100vh;
@@ -569,6 +577,7 @@ blockquote, q {
             
     }
 
+    // "roll-down menu" class for both mobile and desktop displays
     .nav-down {
         @keyframes roll-down {
             0% {
@@ -971,6 +980,8 @@ blockquote, q {
     }
 }
 
+
+//secondary menu for food menus
 .small-nav-container {
      display: flex;
      flex-direction: column;
@@ -1093,6 +1104,7 @@ blockquote, q {
      }
 }
 
+// slide animation styles
 #slide-section {
     position: relative;
     height: 100vh;
@@ -1299,6 +1311,7 @@ blockquote, q {
     }
 }
 
+// slide image webp format images
 .webp {
     #slide-1 .slide-image {
         background-image: url('https://res.cloudinary.com/debdev/image/upload/e_brightness:-12/v1558922803/Fansi%20Schmansi/webp/File_5.webp');
@@ -1321,6 +1334,7 @@ blockquote, q {
     }
 }
 
+// slide image non-webp format images
 .no-webp {
     #slide-1 .slide-image {
         background-image: url('https://res.cloudinary.com/debdev/image/upload/e_brightness:-12/v1559155101/Fansi%20Schmansi/jpg/File_5.jpg');
@@ -1343,6 +1357,7 @@ blockquote, q {
     }
 }
 
+// content width setting for various screen widths
 main, section, #final-section, footer {
     position: relative;
     width: calc(100% - 315px);
@@ -1535,7 +1550,8 @@ main {
         }
     
     }
-    
+
+    // placeholder menu for absolutley styled menu content / retains height of the element
     #placeholder-menu {
         opacity: 0;
         position: relative;
@@ -1546,6 +1562,7 @@ main {
     padding-top: 45px;
 }
 
+// menu content fade-in animations
 [data-scroll] {
     transition: opacity 1.2s, transform 1.2s;
 }
@@ -1672,6 +1689,7 @@ main {
     margin-bottom: 10px;
 }
 
+// bottom section styling
 section {
     background-color: $off-white;
     padding: 300px 0px;
@@ -1912,6 +1930,8 @@ section {
         margin-bottom: 20px;
     }
     
+    //contact info styling
+
     #left-info {
         margin: 0 20px 150px 0;
         width: 30%;
@@ -1946,6 +1966,7 @@ section {
         }
     }
 
+    // Google Maps div styling
     #map-info {
         width: 40%;
         position: relative;
@@ -2114,6 +2135,7 @@ footer {
     background-color: darken($main-text-color, 10%);
 }
 
+// secondary page styling
 #more-info {
     height: 100vh;
     width: 100vw;
